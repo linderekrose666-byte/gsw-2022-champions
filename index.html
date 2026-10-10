@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022 金州勇士總冠軍首發陣容 | Golden State Warriors Champions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gsw: {
+                            blue: '#1D428A',
+                            gold: '#FFC72C',
+                            darkblue: '#0C2340',
+                            navy: '#0B162A',
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        teko: ['Teko', 'sans-serif'],
+                        sans: ['Noto Sans TC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFC72C 0%, #FFE885 50%, #D49B00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .player-card-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+        }
+        .tab-active {
+            border-color: #FFC72C;
+            color: #FFC72C;
+            background-color: rgba(255, 199, 44, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gsw-navy text-gray-100 font-sans min-h-screen flex flex-col selection:bg-gsw-gold selection:text-gsw-darkblue">
+
+    <header class="sticky top-0 z-50 bg-gsw-darkblue/90 backdrop-blur-md border-b border-gsw-gold/30 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="w-12 h-12 rounded-full bg-gsw-gold p-1 flex items-center justify-center shadow-md">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-gsw-blue fill-current">
+                        <circle cx="50" cy="50" r="45" fill="#1D428A" stroke="#FFC72C" stroke-width="4"/>
+                        <path d="M 20 65 Q 50 20 80 65" stroke="#FFC72C" stroke-width="6" fill="none"/>
+                        <path d="M 30 65 L 30 45 M 40 65 L 40 37 M 50 65 L 50 33 M 60 65 L 60 37 M 70 65 L 70 45" stroke="#FFC72C" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="42" fill="none" stroke="#FFC72C" stroke-width="2" stroke-dasharray="4,3"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-wider font-teko text-white uppercase leading-none">GOLDEN STATE WARRIORS</h1>
+                    <p class="text-xs text-gsw-gold font-medium tracking-widest">2022 NBA CHAMPIONS</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#lineup" class="text-gray-300 hover:text-gsw-gold transition">首發陣容</a>
+            </nav>
+
+            <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gsw-gold/20 text-gsw-gold border border-gsw-gold/50">
+                    <i class="fa-solid fa-trophy mr-1.5 text-gsw-gold"></i> 4th Ring in 8 Yrs
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-b from-gsw-darkblue via-gsw-navy to-gsw-navy py-16 px-4 sm:px-6 lg:px-8 border-b border-gsw-gold/20 overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10 text-center">
+            <span class="inline-block tracking-widest text-sm uppercase text-gsw-gold font-bold mb-3 px-4 py-1 rounded-full bg-gsw-blue/50 border border-gsw-gold/30">
+                Gold Standard • Golden Dynasty
+            </span>
+            <h2 class="text-4xl sm:text-6xl md:text-7xl font-extrabold font-teko uppercase tracking-tight text-white mb-4">
+                2022 金州勇士 <span class="gold-gradient-text">總冠軍首發陣容</span>
+            </h2>
+            <p class="max-w-3xl mx-auto text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+                2022 年 NBA 總決賽，金州勇士隊以 4:2 擊敗波士頓塞爾提克，奪得隊史第 7 座 NBA 總冠軍。
+            </p>
+        </div>
+    </section>
+
+    <main id="lineup" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full">
+        <div class="text-center sm:text-left mb-10">
+            <h3 class="text-3xl font-bold font-teko tracking-wide text-white uppercase border-l-4 border-gsw-gold pl-3">
+                首發陣容名單 (Starting 5)
+            </h3>
+            <p class="text-sm text-gray-400 mt-1">點擊下方球員切換詳細數據與冠軍賽表現</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
+            <button onclick="selectPlayer('curry')" id="tab-curry" class="player-tab tab-active p-3 rounded-xl border border-gray-700 bg-gsw-darkblue/60 hover:border-gsw-gold transition-all text-left flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-gsw-blue border border-gsw-gold flex items-center justify-center font-bold text-gsw-gold font-teko text-xl">30</div>
+                <div>
+                    <div class="font-bold text-sm leading-snug">Stephen Curry</div>
+                    <div class="text-xs text-gray-400">PG • 控球後衛</div>
+                </div>
+            </button>
+
+            <button onclick="selectPlayer('klay')" id="tab-klay" class="player-tab p-3 rounded-xl border border-gray-700 bg-gsw-darkblue/60 hover:border-gsw-gold transition-all text-left flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-gsw-blue border border-gsw-gold flex items-center justify-center font-bold text-gsw-gold font-teko text-xl">11</div>
+                <div>
+                    <div class="font-bold text-sm leading-snug">Klay Thompson</div>
+                    <div class="text-xs text-gray-400">SG • 得分後衛</div>
+                </div>
+            </button>
+
+            <button onclick="selectPlayer('wiggins')" id="tab-wiggins" class="player-tab p-3 rounded-xl border border-gray-700 bg-gsw-darkblue/60 hover:border-gsw-gold transition-all text-left flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-gsw-blue border border-gsw-gold flex items-center justify-center font-bold text-gsw-gold font-teko text-xl">22</div>
+                <div>
+                    <div class="font-bold text-sm leading-snug">Andrew Wiggins</div>
+                    <div class="text-xs text-gray-400">SF • 小前鋒</div>
+                </div>
+            </button>
+
+            <button onclick="selectPlayer('draymond')" id="tab-draymond" class="player-tab p-3 rounded-xl border border-gray-700 bg-gsw-darkblue/60 hover:border-gsw-gold transition-all text-left flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-gsw-blue border border-gsw-gold flex items-center justify-center font-bold text-gsw-gold font-teko text-xl">23</div>
+                <div>
+                    <div class="font-bold text-sm leading-snug">Draymond Green</div>
+                    <div class="text-xs text-gray-400">PF • 大前鋒</div>
+                </div>
+            </button>
+
+            <button onclick="selectPlayer('looney')" id="tab-looney" class="player-tab p-3 rounded-xl border border-gray-700 bg-gsw-darkblue/60 hover:border-gsw-gold transition-all text-left flex items-center space-x-3 col-span-2 sm:col-span-1">
+                <div class="w-10 h-10 rounded-full bg-gsw-blue border border-gsw-gold flex items-center justify-center font-bold text-gsw-gold font-teko text-xl">5</div>
+                <div>
+                    <div class="font-bold text-sm leading-snug">Kevon Looney</div>
+                    <div class="text-xs text-gray-400">C • 中鋒</div>
+                </div>
+            </button>
+        </div>
+
+        <div id="player-card-container" class="bg-gsw-darkblue border border-gsw-gold/30 rounded-2xl p-6 lg:p-8 player-card-shadow transition-all duration-300">
+            <!-- Dynamic Content -->
+        </div>
+    </main>
+
+    <footer id="about" class="bg-gsw-navy border-t border-gsw-gold/30 pt-12 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-gray-500">
+            <p>&copy; 2022 Golden State Warriors Championship Fan Tribute. Built for Web Assignment.</p>
+        </div>
+    </footer>
+
+    <script>
+        const playersData = {
+            curry: {
+                number: "30",
+                name: "Stephen Curry",
+                chineseName: "斯蒂芬·庫里",
+                pos: "Point Guard (控球後衛)",
+                heightWeight: "6'2\" (188 cm) / 185 lbs (83 kg)",
+                experience: "13 年 (Davidson College)",
+                fmvp: "2022 Finals MVP",
+                quote: "「他們現在會說些什麼？(What are they gonna say now?)」",
+                description: "歷史最佳射手，勇士進攻體系的絕對核心。2022 年總決賽面對綠軍聯盟第一的防守，第四戰狂砍 43 分 10 籃板震撼世人，並以場均 31.2 分的宰制級表現，無懸念奪得生涯首座 FMVP！",
+                stats: { pts: "31.2", reb: "6.0", ast: "5.0", stl: "2.0", fgPct: "48.2%", threePct: "43.7%" }
+            },
+            klay: {
+                number: "11",
+                name: "Klay Thompson",
+                chineseName: "克萊·湯普森",
+                pos: "Shooting Guard (得分後衛)",
+                heightWeight: "6'6\" (198 cm) / 220 lbs (99 kg)",
+                experience: "11 年 (Washington State)",
+                fmvp: "4× NBA Champion",
+                quote: "「經過 941 天的等待與復健，這座冠軍比什麼都珍貴。」",
+                description: "浪花兄弟（Splash Brothers）另一成員，頂級 3D 側翼指標。在經歷大傷後重返賽場，在 2022 季後賽與總決賽多次扮演關鍵冷血射手。",
+                stats: { pts: "17.0", reb: "3.0", ast: "2.0", stl: "1.3", fgPct: "35.6%", threePct: "35.1%" }
+            },
+            wiggins: {
+                number: "22",
+                name: "Andrew Wiggins",
+                chineseName: "安德魯·維金斯",
+                pos: "Small Forward (小前鋒)",
+                heightWeight: "6'7\" (201 cm) / 197 lbs (89 kg)",
+                experience: "8 年 (University of Kansas)",
+                fmvp: "2022 All-Star / Champion",
+                quote: "「我只想盡我所能防守、抓籃板，做任何能贏球的事。」",
+                description: "2022 勇士奪冠的二號功臣與最大驚喜！總決賽主防塞爾提克核心 Jayson Tatum 效果顯著，攻守兼備，展現頂級天賦與拼勁。",
+                stats: { pts: "18.3", reb: "8.8", ast: "2.2", stl: "1.5", fgPct: "44.6%", threePct: "29.7%" }
+            },
+            draymond: {
+                number: "23",
+                name: "Draymond Green",
+                chineseName: "德雷蒙德·格林",
+                pos: "Power Forward (大前鋒)",
+                heightWeight: "6'6\" (198 cm) / 230 lbs (104 kg)",
+                experience: "10 年 (Michigan State)",
+                fmvp: "4× Champion / DPOY",
+                quote: "「我們擁有一支特殊的球隊，我們的防守體系能贏得總冠軍。」",
+                description: "勇士防守大腦與組織軸心。在 G5 與 G6 迅速調整狀態，展現頂級防守指揮與組織轉動能力，是精神領袖。",
+                stats: { pts: "6.2", reb: "8.0", ast: "6.2", stl: "1.7", fgPct: "33.3%", threePct: "12.5%" }
+            },
+            looney: {
+                number: "5",
+                name: "Kevon Looney",
+                chineseName: "凱文·魯尼",
+                pos: "Center (中鋒)",
+                heightWeight: "6'9\" (206 cm) / 222 lbs (100 kg)",
+                experience: "7 年 (UCLA)",
+                fmvp: "3× Champion / Iron Man",
+                quote: "「做苦工、抓進攻籃板，只要能讓隊友得到空檔我就開心。」",
+                description: "勇士隊默無聞的藍領基石。全季 82 場全勤，在季後賽與總決賽展現強大進攻籃板搶奪能力與掩護質量。",
+                stats: { pts: "5.0", reb: "7.5", ast: "2.7", stl: "0.8", fgPct: "63.6%", threePct: "0.0%" }
+            }
+        };
+
+        function selectPlayer(playerKey) {
+            const player = playersData[playerKey];
+            if (!player) return;
+
+            document.querySelectorAll('.player-tab').forEach(tab => {
+                tab.classList.remove('tab-active');
+            });
+            const activeTab = document.getElementById(`tab-${playerKey}`);
+            if (activeTab) activeTab.classList.add('tab-active');
+
+            const container = document.getElementById('player-card-container');
+            container.innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-5 flex flex-col items-center sm:items-start text-center sm:text-left border-b lg:border-b-0 lg:border-r border-gray-800 pb-6 lg:pb-0 lg:pr-8">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-20 h-20 rounded-2xl bg-gsw-blue border-2 border-gsw-gold p-3 flex items-center justify-center shadow-lg">
+                                <span class="font-teko text-3xl font-bold text-gsw-gold">#${player.number}</span>
+                            </div>
+                            <div>
+                                <div class="text-gsw-gold font-teko text-3xl font-bold leading-none">#${player.number}</div>
+                                <h2 class="text-2xl font-black text-white leading-tight">${player.name}</h2>
+                                <p class="text-sm text-gray-400 font-medium">${player.chineseName}</p>
+                            </div>
+                        </div>
+
+                        <div class="w-full bg-gsw-navy/90 p-4 rounded-xl border border-gray-800 mb-4 space-y-2 text-xs">
+                            <div class="flex justify-between border-b border-gray-800 pb-1.5">
+                                <span class="text-gray-400">場上位置：</span>
+                                <span class="font-bold text-white">${player.pos}</span>
+                            </div>
+                            <div class="flex justify-between border-b border-gray-800 pb-1.5">
+                                <span class="text-gray-400">身高/體重：</span>
+                                <span class="font-bold text-white">${player.heightWeight}</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-400">2022 榮譽：</span>
+                                <span class="font-bold text-gsw-gold">${player.fmvp}</span>
+                            </div>
+                        </div>
+
+                        <blockquote class="text-xs italic text-gsw-gold/90 bg-gsw-blue/20 border-l-2 border-gsw-gold p-3 rounded-r-md w-full">
+                            ${player.quote}
+                        </blockquote>
+                    </div>
+
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <h4 class="text-sm font-bold text-gsw-gold uppercase tracking-wider mb-2 flex items-center">
+                                <i class="fa-solid fa-user-ninja mr-2"></i> 球員角色與冠軍戰定位
+                            </h4>
+                            <p class="text-sm text-gray-300 leading-relaxed">${player.description}</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-bold text-gsw-gold uppercase tracking-wider mb-3 flex items-center">
+                                <i class="fa-solid fa-chart-line mr-2"></i> 2022 總決賽數據統計 (Per Game)
+                            </h4>
+                            <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 text-center">
+                                <div class="bg-gsw-navy p-2.5 rounded-lg border border-gray-800">
+                                    <div class="text-xs text-gray-400">得分</div>
+                                    <div class="font-teko text-2xl font-bold text-gsw-gold">${player.stats.pts}</div>
+                                </div>
+                                <div class="bg-gsw-navy p-2.5 rounded-lg border border-gray-800">
+                                    <div class="text-xs text-gray-400">籃板</div>
+                                    <div class="font-teko text-2xl font-bold text-white">${player.stats.reb}</div>
+                                </div>
+                                <div class="bg-gsw-navy p-2.5 rounded-lg border border-gray-800">
+                                    <div class="text-xs text-gray-400">助攻</div>
+                                    <div class="font-teko text-2xl font-bold text-white">${player.stats.ast}</div>
+                                </div>
+                                <div class="bg-gsw-navy p-2.5 rounded-lg border border-gray-800">
+                                    <div class="text-xs text-gray-400">抄截</div>
+                                    <div class="font-teko text-2xl font-bold text-white">${player.stats.stl}</div>
+                                </div>
+                                <div class="bg-gsw-navy p-2.5 rounded-lg border border-gray-800">
+                                    <div class="text-xs text-gray-400">命中率</div>
+                                    <div class="font-teko text-2xl font-bold text-emerald-400">${player.stats.fgPct}</div>
+                                </div>
+                                <div class="bg-gsw-navy p-2.5 rounded-lg border border-gray-800">
+                                    <div class="text-xs text-gray-400">三分率</div>
+                                    <div class="font-teko text-2xl font-bold text-emerald-400">${player.stats.threePct}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            selectPlayer('curry');
+        });
+    </script>
+</body>
+</html>
